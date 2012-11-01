@@ -1,0 +1,26 @@
+class Todo.Views.TodoView extends Backbone.View
+
+	template: (options) ->
+		new EJS({url: "scripts/templates/todo_view.ejs"}).render(options)
+
+	events:
+		"submit #new_task_form": "create"
+
+	initialize: ->
+		@collection.on("reset", @render, this)
+		@collection.on("add", @appendTodo, this)
+
+	create: (event) ->
+		event.preventDefault()
+		@collection.create({task: $("#task").val(), done:false })
+		$("#task").val("")
+
+	appendTodo: (entry) ->
+		single_todo = new Todo.Views.Todo({model: entry})
+		@$("#todo-list").append(single_todo.render().el)
+
+	render: ->
+		$(@el).html(@template())
+		$("#todoapp").html(@el)
+		@collection.each @appendTodo
+		this
