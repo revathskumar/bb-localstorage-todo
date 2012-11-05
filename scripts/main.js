@@ -1,0 +1,3 @@
+jQuery(function($){
+	Todo.init();
+});
