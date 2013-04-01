@@ -138,7 +138,7 @@ module.exports = function (grunt) {
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: 'app/components',
+        importPath: 'app/styles',
         relativeAssets: true
       },
       dist: {},
@@ -233,13 +233,8 @@ module.exports = function (grunt) {
     },
     jst: {
       compile: {
-        options: {
-          templateSettings: {
-            interpolate : /\{\{(.+?)\}\}/g
-          }
-        },
         files: {
-          '.tmp/scripts/templates/templates.js': ['<%= yeoman.app %>/scripts/templates/*.ejs']
+          '.tmp/scripts/templates.js': ['<%= yeoman.app %>/scripts/templates/*.ejs']
         }
       }
     }
