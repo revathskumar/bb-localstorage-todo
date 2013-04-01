@@ -1,7 +1,6 @@
 class Todo.Views.TodoView extends Backbone.View
 
-	template: (options) ->
-		new EJS({url: "scripts/templates/todo_view.ejs"}).render(options)
+	template: JST['scripts/templates/todo_view']
 
 	events:
 		"submit #new_task_form": "create"
