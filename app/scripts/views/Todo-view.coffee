@@ -1,6 +1,6 @@
 class Todo.Views.TodoView extends Backbone.View
 
-	template: JST['scripts/templates/todo_view']
+	template: JST['app/scripts/templates/todo_view.ejs']
 
 	events:
 		"submit #new_task_form": "create"
