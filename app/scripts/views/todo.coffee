@@ -1,8 +1,7 @@
 class Todo.Views.Todo extends Backbone.View
 
   tagName: "tr"
-  template: (options) ->
-    new EJS({url: "scripts/templates/todo.ejs"}).render(options)
+  template: JST['app/scripts/templates/todo.ejs']
 
   events:
     "click #done": "updateStatus"

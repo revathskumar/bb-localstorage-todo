@@ -2,3 +2,7 @@ intermediate/
 publish/
 temp/
 .sass-cache/
+app/scripts/vendor/
+.tmp/
+dist/
+node_modules/
