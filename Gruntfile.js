@@ -148,15 +148,15 @@ module.exports = function (grunt) {
         }
       }
     },
-    uglify: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/scripts/main.js': [
-            '<%= yeoman.app %>/scripts/{,*/}*.js'
-          ],
-        }
-      }
-    },
+    // uglify: {
+    //   dist: {
+    //     files: {
+    //       '<%= yeoman.dist %>/scripts/main.js': [
+    //         '<%= yeoman.app %>/scripts/{,*/}*.js'
+    //       ],
+    //     }
+    //   }
+    // },
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
