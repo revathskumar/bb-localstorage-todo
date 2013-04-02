@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:revathskumar/bb-localstorage-todo.git
+	branch = gh-pages
