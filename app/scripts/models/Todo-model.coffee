@@ -1,12 +1,12 @@
 class Todo.Models.TodoModel extends Backbone.Model
-	
-	defaults:
+
+  defaults:
     id: null
     task: null
     done: null
 
   initialize: ->
-  	console.log "initialize model"
+    console.log "initialize model"
 
   validate: ->
-  		
+

@@ -1,14 +1,14 @@
 class Todo.Routers.TodoRouter extends Backbone.Router
-	initialize:  ->
-		console.log "initialize"
+  routes: {
+    "index": "index"
+    "": "index"
+  }
 
-	routes:
-		"": "index"
+  initialize: ->
+    @collection = new Todo.Collections.TodosCollection();
+    @collection.fetch()
 
-	initialize: ->
-		@collection = new Todo.Collections.TodosCollection();
-		@collection.fetch()
-
-	index: ->
-		todos = new Todo.Views.TodoView({collection: @collection});
-		todos.render()
+  index: ->
+    console.log "Router index"
+    todos = new Todo.Views.TodoView({collection: @collection});
+    todos.render()
