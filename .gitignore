@@ -1,7 +1,7 @@
-intermediate/
-publish/
-temp/
-.sass-cache/
-app/scripts/vendor/
+node_modules
+temp
+dist
+.sass-cache
+app/bower_components
 .tmp/
-node_modules/
+test/bower_components/
